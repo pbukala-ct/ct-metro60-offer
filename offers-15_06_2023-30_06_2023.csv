@@ -1,0 +1,4 @@
+Start_Date,End_Date,OfferId,Product_Number,Master_Article,Vendor_Fund_Scan_Back
+17/05/2023,23/05/2023,1234,product1,master1,0.40	
+17/05/2023,23/05/2023,5678,product2,master2,2.50
+17/05/2023,23/05/2023,9123,product3,master3,1.00

@@ -1,0 +1,157 @@
+{
+    "id": "55f4fde6-3a1b-4cc2-bc3c-a6fc2f4fbc2a",
+    "version": 4,
+    "versionModifiedAt": "2023-06-16T07:50:19.629Z",
+    "lastMessageSequenceNumber": 3,
+    "createdAt": "2023-06-16T07:49:54.087Z",
+    "lastModifiedAt": "2023-06-16T07:50:19.629Z",
+    "lastModifiedBy": {
+      "isPlatformClient": true,
+      "user": {
+        "typeId": "user",
+        "id": "e831fdda-deb3-43b7-a347-3853f3b10dc0"
+      }
+    },
+    "createdBy": {
+      "isPlatformClient": true,
+      "user": {
+        "typeId": "user",
+        "id": "e831fdda-deb3-43b7-a347-3853f3b10dc0"
+      }
+    },
+    "productType": {
+      "typeId": "product-type",
+      "id": "8e54d16a-77bb-48f9-9c39-8ecf11c4c9eb"
+    },
+    "masterData": {
+      "current": {
+        "name": {
+          "en": "Product 1"
+        },
+        "description": {
+          "en": "product1"
+        },
+        "categories": [
+          
+        ],
+        "categoryOrderHints": {
+          
+        },
+        "slug": {
+          "en": "product-1"
+        },
+        "metaTitle": {
+          "en": "",
+          "de": ""
+        },
+        "metaDescription": {
+          "en": "",
+          "de": ""
+        },
+        "masterVariant": {
+          "id": 1,
+          "sku": "product1",
+          "key": "product1",
+          "prices": [
+            {
+              "id": "76d08e22-29cd-4671-b56d-d4b6ecb72b7f",
+              "value": {
+                "type": "centPrecision",
+                "currencyCode": "AUD",
+                "centAmount": 1000,
+                "fractionDigits": 2
+              },
+              "key": "p1"
+            }
+          ],
+          "images": [
+            
+          ],
+          "attributes": [
+            {
+              "name": "baseId",
+              "value": "product1"
+            }
+          ],
+          "assets": [
+            
+          ]
+        },
+        "variants": [
+          
+        ],
+        "searchKeywords": {
+          
+        }
+      },
+      "staged": {
+        "name": {
+          "en": "Product 1"
+        },
+        "description": {
+          "en": "product1"
+        },
+        "categories": [
+          
+        ],
+        "categoryOrderHints": {
+          
+        },
+        "slug": {
+          "en": "product-1"
+        },
+        "metaTitle": {
+          "en": "",
+          "de": ""
+        },
+        "metaDescription": {
+          "en": "",
+          "de": ""
+        },
+        "masterVariant": {
+          "id": 1,
+          "sku": "product1",
+          "key": "product1",
+          "prices": [
+            {
+              "id": "76d08e22-29cd-4671-b56d-d4b6ecb72b7f",
+              "value": {
+                "type": "centPrecision",
+                "currencyCode": "AUD",
+                "centAmount": 1000,
+                "fractionDigits": 2
+              },
+              "key": "p1"
+            }
+          ],
+          "images": [
+            
+          ],
+          "attributes": [
+            {
+              "name": "baseId",
+              "value": "product1"
+            }
+          ],
+          "assets": [
+            
+          ]
+        },
+        "variants": [
+          
+        ],
+        "searchKeywords": {
+          
+        }
+      },
+      "published": true,
+      "hasStagedChanges": false
+    },
+    "key": "product1",
+    "taxCategory": {
+      "typeId": "tax-category",
+      "id": "ab121e39-d43a-48b0-8282-cea8ade9582b"
+    },
+    "priceMode": "Embedded",
+    "lastVariantId": 1
+  }

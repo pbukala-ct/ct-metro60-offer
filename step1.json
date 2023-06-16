@@ -1,0 +1,23 @@
+{
+    "key": "price-offerID",
+    "name": {
+      "en": "Offer ID for Metro60"
+    },
+    "resourceTypeIds": [
+      "product-price"
+    ],
+    "fieldDefinitions": [
+      {
+        "type": {
+          "name": "String"
+        },
+        "name": "offerId",
+        "label": {
+          "en": "Offer ID"
+        },
+        "required": false,
+        "inputHint": "SingleLine"
+      }
+    ]
+   }
+   

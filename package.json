@@ -1,0 +1,22 @@
+{
+  "name": "ct-metro60-offer",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Metro60 PoC for offers as price row external discount",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@commercetools/platform-sdk": "^3.0.0",
+    "@commercetools/sdk-client-v2": "^1.4.0",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.0.3",
+    "jsonfile": "^6.1.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "node-fetch": "^3.3.0"
+  }
+}
