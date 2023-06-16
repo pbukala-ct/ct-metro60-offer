@@ -22,12 +22,12 @@ Step one requires making minor data model changes by creating new field, **Offer
 
 
 ### 
-**POSTCreate Type**
+**POST Create Type**
 
 https://api.{region}.commercetools.com//types
 
 **Payload:**
-
+```json
 {
 
  "key": "price-offerID",
@@ -71,6 +71,7 @@ https://api.{region}.commercetools.com//types
  ]
 
 }
+```
 
 This will allow to store unique offers IDs on the the product price that is discounted.
 
