@@ -1,9 +1,6 @@
 # Metro60/Milkrun Weekly Offers in commercetools PoC
 
 
-[TOC]
-
-
 
 ## Overview
 
@@ -12,9 +9,9 @@
 
 The provide nodejs script is very easy to read. 
 
-Most of the logic happens in the_ index.js._ 
+Most of the logic happens in the_ index.js.
 
-_ct-productDiscount.js and ct-product.js _are leveraging commercetools javascript SDK to create discount and load/update product.
+ct-productDiscount.js and ct-product.js are leveraging commercetools javascript SDK to create discount and load/update product.
 
 Other files are sample CSV with offers, “offers-15_06_2023-30_06_2023.csv” .env with the API Client and some configuration (see below) and step1.json file with the API call to make the required data model changes.
 
