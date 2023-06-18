@@ -32,7 +32,7 @@ Step one requires making minor data model changes by creating new field, **Offer
 
 
 ### 
-**POSTCreate Type**
+**POST Create Type**
 
 https://api.{region}.commercetools.com//types
 
