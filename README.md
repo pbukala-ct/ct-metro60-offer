@@ -8,12 +8,12 @@ This is an overview of the features and solution for loading weekly offers for p
 This solution is based on the commercetools API and data model solely. It consists of leveraging the “external” discount that is applicable directly to the product price row.
 Requirements are as follows:
 
-New custom price field to store the offer ID
-Creating Product Discount with date range reflecting the offer for the week
-Getting product and selecting the right price row for discount (in case more prices are available)
-Updating product with price field 
-Updating product with offer ID
-Updating product with previously calculated discount
+- New custom price field to store the offer ID
+- Creating Product Discount with date range reflecting the offer for the week
+- Getting product and selecting the right price row for discount (in case more prices are available)
+- Updating product with price field 
+- Updating product with offer ID
+- Updating product with previously calculated discount
 
 ## Solution
 
