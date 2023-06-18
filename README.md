@@ -4,6 +4,16 @@
 
 ## Overview
 
+This is an overview of the features and solution for loading weekly offers for products into commercetools
+This solution is based on the commercetools API and data model solely. It consists of leveraging the “external” discount that is applicable directly to the product price row.
+Requirements are as follows:
+
+New custom price field to store the offer ID
+Creating Product Discount with date range reflecting the offer for the week
+Getting product and selecting the right price row for discount (in case more prices are available)
+Updating product with price field 
+Updating product with offer ID
+Updating product with previously calculated discount
 
 ## Solution
 
@@ -27,7 +37,7 @@ Step one requires making minor data model changes by creating new field, **Offer
 https://api.{region}.commercetools.com//types
 
 **Payload:**
-
+```json
 {
 
  "key": "price-offerID",
@@ -71,6 +81,7 @@ https://api.{region}.commercetools.com//types
  ]
 
 }
+```
 
 This will allow to store unique offers IDs on the the product price that is discounted.
 
@@ -227,13 +238,18 @@ All above actions can be handled in single API call to update the product with p
 
 ## Limitations & Enhancements
 
-Overall
-
-There are many enhancements that can be done to make this production ready service.
+Overall there are many enhancements that can be done to make this production ready service.
 
 E.g. reading the file automatically from repository, turing each CSV line into event and processing it as a serverless function from a queue etc.
 
 Below are just some limitations of the script to make it run in any commercetools project.
+
+
+### External Price Discount
+
+At the momen there is only one discount that can be applied to the product. So calling the above product update action will override any existing discounts.
+
+While applying discount, the current date needs to be withing the date range for when the product discount is applicable. That means that the discounts can only be applied once the offers are active and override the previous offers. Potential solutionn would be to automate this job and create discounts right at midnight.
 
 
 ### Product Discount:
