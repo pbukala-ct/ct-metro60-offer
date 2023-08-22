@@ -5,7 +5,7 @@
 ## Overview
 
 This is an overview of the features and solution for loading weekly offers for products into commercetools
-This solution is based on the commercetools API and data model solely. It consists of leveraging the “external” discount that is applicable directly to the product price row.
+This solution is based on the commercetools API and data model solely. It consists of leveraging the “**external**” discount that is applicable directly to the product price row.
 Requirements are as follows:
 
 - New custom price field to store the offer ID
