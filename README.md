@@ -1,4 +1,4 @@
-# Metro60/Milkrun Weekly Offers in commercetools PoC
+# Weekly Offers in commercetools PoC
 
 
 
@@ -44,7 +44,7 @@ https://api.{region}.commercetools.com//types
 
  "name": {
 
-   "en": "Offer ID for Metro60"
+   "en": "Offer ID for Grocery Retailer"
 
  },
 
