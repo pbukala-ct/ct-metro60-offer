@@ -17,18 +17,18 @@ Requirements are as follows:
 
 ## Solution
 
-The provide nodejs script is very easy to read. 
+The provided nodejs script is very easy to read. 
 
 Most of the logic happens in the_ index.js.
 
-ct-productDiscount.js and ct-product.js are leveraging commercetools javascript SDK to create discount and load/update product.
+ct-productDiscount.js and ct-product.js are leveraging commercetools javascript SDK to create discounts and load/update products.
 
 Other files are sample CSV with offers, “offers-15_06_2023-30_06_2023.csv” .env with the API Client and some configuration (see below) and step1.json file with the API call to make the required data model changes.
 
 
 ### Step I: Data Model 
 
-Step one requires making minor data model changes by creating new field, **OfferId**, on  Product Price type.
+Step one requires making minor data model changes by creating a new field, **OfferId**, on  the Product Price type.
 
 
 ### 
@@ -83,7 +83,7 @@ https://api.{region}.commercetools.com//types
 }
 ```
 
-This will allow to store unique offers IDs on the the product price that is discounted.
+This will allow to store of unique offer IDs on the the product price that is discounted.
 
 The above json data is saved in the **step1.json** file.
 
@@ -101,7 +101,7 @@ CUSTOM_PRICE_FIELD_KEY=offerId
 
 We need to create a single product discount for the weekly offers. 
 
-For the purpose of this PoC I assumed the weekly offers are stored in single CSV file that can be titled with the date range e.g.
+For the purpose of this PoC I assumed the weekly offers are stored in a single CSV file that can be titled with the date range e.g.
 
 
 ```
@@ -109,7 +109,7 @@ For the purpose of this PoC I assumed the weekly offers are stored in single CSV
 ```
 
 
-The script will parse the file name and extract the dates range to create one product discount for the entire week:
+The script will parse the file name and extract the date range to create one product discount for the entire week:
 
 
 
@@ -145,7 +145,7 @@ The **productDiscountId** is important for applying the external discount on the
 
 ### Step III: Updating Price with type and field
 
-For every line in the CSV file with offers we take the Product Number as a Product Key in commercetools and we use it to update price row with additional custom field created above:
+For every line in the CSV file with offers, we take the Product Number as a Product Key in commercetools and we use it to update the price row with an additional custom field created above:
 
 
 ```
@@ -175,11 +175,11 @@ With the same API call we can also update the offer ID from the read from the CS
 
 After running the example CSV the console prints log with the offers and price row ids with calculated discounted price
 
-Offer 1234 was sucessfully set on Price 76d08e22-29cd-4671-b56d-d4b6ecb72b7f with discounted price 960
+Offer 1234 was successfully set on Price 76d08e22-29cd-4671-b56d-d4b6ecb72b7f with discounted price 960
 
-Offer 5678 was sucessfully set on Price da4f7ba8-d5f6-4e2e-9259-dda48b00d12e with discounted price 1250
+Offer 5678 was successfully set on Price da4f7ba8-d5f6-4e2e-9259-dda48b00d12e with discounted price 1250
 
-Offer 9123 was sucessfully set on Price 5d0ac535-c3c9-404b-a0b7-968fcc6db151 with discounted price 400
+Offer 9123 was successfully set on Price 5d0ac535-c3c9-404b-a0b7-968fcc6db151 with discounted price 400
 
 With Marchant Centre in commercetools the discount is visible on the price row together with the offer id in custom fields:
 
@@ -198,9 +198,9 @@ With Marchant Centre in commercetools the discount is visible on the price row t
 
 ### Step IV.
 
-Final step is to set the discounted price on the price row.
+The final step is to set the discounted price on the price row.
 
-Since it requires the actual value, rather than discount itself, the calculation of discounted price has to happen before:
+Since it requires the actual value, rather than the discount itself, the calculation of the discounted price has to happen before:
 
 
 ```
@@ -233,24 +233,25 @@ The final action is to set it on the price:
 ```
 
 
-All above actions can be handled in single API call to update the product with provided key.
+All above actions can be handled in a single API call to update the product with the provided key.
 
 
 ## Limitations & Enhancements
 
-Overall there are many enhancements that can be done to make this production ready service.
+Overall there are many enhancements that can be done to make this production-ready service.
 
-E.g. reading the file automatically from repository, turing each CSV line into event and processing it as a serverless function from a queue etc.
+E.g. reading the file automatically from the repository, turning each CSV line into an event and processing it as a serverless function from a queue etc.
 
 Below are just some limitations of the script to make it run in any commercetools project.
 
 
 ### External Price Discount
 
-At the momen there is only one discount that can be applied to the product. So calling the above product update action will override any existing discounts.
+At the moment there is only one discount that can be applied to the **price row**. So calling the above product update action will override any existing discount on the price row.
 
-While applying discount, the current date needs to be withing the date range for when the product discount is applicable. That means that the discounts can only be applied once the offers are active and override the previous offers. Potential solutionn would be to automate this job and create discounts right at midnight.
+While applying the discount, the current date needs to be within the date range for when the product discount is applicable. That means that the discounts can only be applied once the offers are active and override the previous offers. A potential solution would be to automate this job and create discounts right at midnight.
 
+Update: More discounts can be added to other price rows of the same variant. Including the same discounts code (placeholder for promotion/offer). Discount value is related 1:1 with price row. 
 
 ### Product Discount:
 
