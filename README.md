@@ -258,3 +258,26 @@ Update: More discounts can be added to other price rows of the same variant. Inc
 Product Discount sortOdrer has to be unique - in the PoC script it is fixed in the .env file.
 
 Solution: increment the value based on the previous discount - stored in a separate configuration file.
+
+### Standalone Price Discount
+The same discount can be applied to Standalone Prices. The only difference is in the update action, instead of calling it on Product Resource, the setDiscountedPrice on the Stanadalone Price resource should be used:
+
+```
+{
+  "action": "setDiscountedPrice",
+  "discounted": {
+    "value": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 2990,
+      "fractionDigits": 2
+    },
+    "discount": {
+      "typeId": "product-discount",
+      "id": "{{product-discount-id}}"
+    }
+  }
+}
+
+```
+Docs: https://docs.commercetools.com/api/projects/standalone-prices#set-discounted-price
